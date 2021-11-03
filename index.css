@@ -2,11 +2,25 @@ html {
     font-family: "Noto Sans KR";
 }
 
+body {
+    margin: 0px;
+}
+
 footer {
-    position:fixed;
+    position: relative;
     left:0px;
     bottom:0px;
     width: 100%;
     background-color: #C9C9C9;
     padding: 0.5em 0 0.5em 0.5em;
+}
+
+button {
+    background-color: #4a60a8;
+    color: white;
+    font-weight: bold;
+    border: 1px;
+    border-radius: 5rem;
+    padding: 0.4rem 2rem;
+    margin: 0 auto;
 }
