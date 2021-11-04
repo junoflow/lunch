@@ -1,3 +1,4 @@
+
 @media all and (max-width: 1920px) {
     .page .x700{display:block;}
     .page .x290{display:none;}
@@ -12,7 +13,7 @@
 html {
     font-family: "Noto Sans KR";
     min-height: 100%;
-    width: 100%;
+    max-width: 100%;
     margin: 0;
     padding: 0;
 }
@@ -20,6 +21,7 @@ html {
 body {
     margin: 0;
     padding: 0;
+    width: 100%;
     min-height: 100%;
 }
 
@@ -27,14 +29,14 @@ body {
     width:100%;
     text-align: center;
     vertical-align:middle;  
-    padding-bottom: 50px /*footer의 높이*/
 }
 
 .page .x290 {
-    padding-bottom: 50px  /*footer의 높이*/
+    padding-bottom: 20px  /*footer의 높이*/
 }
 
 footer {
+    box-sizing: border-box;
     left:0px;
     bottom:0px;
     height: 50px; /* footer의 높이 */
