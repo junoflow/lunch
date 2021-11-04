@@ -12,47 +12,65 @@
         rel="stylesheet">
 </head>
 
-<body>
-    <div class="navbar" style="width: 98%; margin: 8px auto; padding: 8px">
+<header>
+    <div class="navbar" style="width: 98%; height: 50px; padding: 12px">
         <img src="img/logo.svg" style="height: 50px">
     </div>
-    <div class="main_copy" style="line-height: 120%; width: 97%; margin:0 auto 0 15px">
-        <h1>잘 뛰려면</h1>
-        <h1>잘 먹어야하니까</h1>
-        <p style="color: #838383; margin: 30px 0">
-            오늘 뭐먹지? 하고 고민될 때<br>
-            사용해주세요
-        </p>
-    </div>
+</header>
 
-    <div class="division" style="margin: 3rem auto; padding: 8px">
-        <hr style="width: 80px; height: 2px; text-align: center; background-color: black;">
-    </div>
+<body>
+    <div class="page" style="min-height: 100%; position: relative;">
 
-    <div class="random" style="line-height: 120%; width: 97%; margin:0 auto 0 15px">
+        <div class="x700">
+            <div style="display:inline-block; height:600px; line-height:600px;">
+                <h1 style="margin: auto;">모바일에서 접속해 주세요</h1>
+            </div>
+        </div>
 
-        <h2>오늘은</h2>
-        <h2>[                  ]</h2>
-        <h2>어떠세요?</h2>
 
-        <div class="info">
+        <div class="x290">
+            <div class="main_copy" style="line-height: 130%; width: 97%; margin:0 auto 0 15px">
+                <h1>잘 뛰려면</h1>
+                <h1>잘 먹어야하니까</h1>
+                <p style="color: #838383; margin: 30px 0">
+                    오늘 뭐먹지? 하고 고민될 때<br>
+                    사용해주세요
+                </p>
+            </div>
 
-            <p class="food">음식이 표시될 곳</p>
-            <p class="address">주소가 표시될 곳</p>
-            <p class="cost">금액이 표시될 곳</p>
+            <div class="division" style="margin: 3rem auto; padding: 8px">
+                <hr style="width: 80px; height: 2px; text-align: center; background-color: black;">
+            </div>
+
+            <div class="random" style="line-height: 120%; width: 97%; margin:0 auto 0 15px">
+
+                <h2>오늘은</h2>
+                <h2>[                  ]</h2>
+                <h2>어떠세요?</h2>
+
+                <div class="info">
+
+                    <p class="food">음식이 표시될 곳</p>
+                    <p class="address">주소가 표시될 곳</p>
+                    <p class="cost">금액이 표시될 곳</p>
+
+                </div>
+            </div>
+            
+            <div class="reload" style="display:flex; margin: 2rem auto 1rem auto">
+                <button onClick="window.location.reload()">새로고침</button>
+            </div>
+
+            <div class="add_restaurant" style="display:flex; margin: 1rem auto 2rem auto">
+                <button type="button">식당 등록하기</button>
+            </div>
 
         </div>
-    </div>
 
-    <div class="add_restaurant" style="display:flex; margin: 2rem auto">
-        <button type="button">
-        식당 등록하기
-        </button>
     </div>
-
 
     <footer>
-        <p style="font-size: 10px">문의 : jhhyun@madup.com</p>
+        <p style="font-size: 12px">문의 : jhhyun@madup.com</p>
     </footer>
 
 </body>
