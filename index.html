@@ -42,23 +42,29 @@
                 <hr style="width: 80px; height: 2px; text-align: center; background-color: black;">
             </div>
 
-            <div class="random" style="box-sizing: border-box; line-height: 120%; width: 100%; padding:0 0 0 15px">
+            <div class="random" style="box-sizing: border-box; line-height: 120%; width: 100%; padding:0 15px 0 15px">
 
                 <h2>오늘은</h2>
-                <p>[</p>
+                <h2 class="restaurant" style="color: #4a60a8;">식당 이름</h2>
                 <h2>어떠세요?</h2>
 
-                <div class="info">
-
-                    <p class="food">음식이 표시될 곳</p>
-                    <p class="address">주소가 표시될 곳</p>
-                    <p class="cost">금액이 표시될 곳</p>
-
+                <div class="info" style="margin: 15px 0">
+                    <p class="menu">주요 메뉴</p>
+                    <p class="address">서울시 강남구 어쩌구로 11길</p>
+                    <p class="cost">9000~12000</p>
                 </div>
+
+                <button class="map-api" type="button" style="display: inline-block;">
+                    
+                    <img src="img/place.svg" style="height:20px; display:inline-block;  vertical-align: middle;"></img>
+                    <p style="display:inline-block; margin: 0; vertical-align: middle;">지도에서 보기</p></button>
+
+
+
             </div>
             
             <div class="reload" style="display:flex; margin: 4rem auto 1rem auto">
-                <button onClick="window.location.reload()">새로고침</button>
+                <button type="button" onClick="window.location.reload()">새로고침</button>
             </div>
 
             <div class="add_restaurant" style="display:flex; margin: 1rem auto 2rem auto">
