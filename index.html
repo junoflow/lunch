@@ -67,10 +67,10 @@
 
                 <button class="map-api" type="button" style="display: inline-block;">
                     
-                    <img src="img/place.svg" style="height:20px; display:inline-block;  vertical-align: middle;"></img>
-                    <p style="display:inline-block; margin: 0; vertical-align: middle;">지도에서 보기</p></button>
-
-
+                    <img src="img/place.svg" style="height:20px; display:inline-block;  vertical-align: middle;" />
+                    <p style="display:inline-block; margin: 0; vertical-align: middle;">지도에서 보기</p>
+                
+                </button>
 
             </div>
             
@@ -89,15 +89,31 @@
             <!-- 식당 추가 팝업창-->
             <div id="modal" class="modal-overlay">
                 <div class="modal-window">
+                    <div class="close-area"> × </div>
+
                     <div class="title">
-                        <h2>모달</h2>
+                        <h2></h2><br>
+                        <h2>새로운 식당을 등록해주세요</h2><br>
+                        <p>여러분의 제보가 풍족한 점심시간을 만듭니다.</p><br>
                     </div>
-                    <div class="close-area">X</div>
+
                     <div class="content">
-                        <p>가나다라마바사 아자차카타파하</p>
-                        <p>가나다라마바사 아자차카타파하</p>
-                        <p>가나다라마바사 아자차카타파하</p>
-                        <p>가나다라마바사 아자차카타파하</p>                  
+                        <div class="restaurantName">
+                            <p>식당 이름</p>
+                            <input type="text" placeholder="ex. 쿠차라">
+                        </div>
+                        <div class="restaurantMenu">
+                            <p>주요 메뉴</p>
+                            <input type="text" placeholder="ex. 부리또볼">
+                        </div>
+                        <div class="restaurantName">
+                            <p>가격대</p>
+                            <input type="text" placeholder="ex. 12000원~18000원">
+                        </div>
+                    </div>
+
+                    <div class="submit">
+                        <button type="button">등록하기</button>
                     </div>
                 </div>
             </div>
