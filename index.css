@@ -12,6 +12,7 @@
 
 html {
     box-sizing: border-box;
+    position: relative;
     font-family: "Noto Sans KR";
     min-height: 100%;
     max-width: 100%;
@@ -30,22 +31,40 @@ body {
 .page .x700 {
     width:100%;
     text-align: center;
-    vertical-align:middle; 
-    padding-bottom: 20px  /*footer의 높이*/ 
+    vertical-align: middle; 
+    height: auto;
+    min-height: 100%;
+    padding-bottom: 3.5em;  /*footer의 높이*/ 
 }
 
 .page .x290 {
-    padding-bottom: 20px  /*footer의 높이*/
+    padding-bottom: 3.5em;  /*footer의 높이*/
 }
+
 
 footer {
     box-sizing: border-box;
-    left:0px;
-    bottom:0px;
+    position: relative;
+    left: 0px;
+    bottom: 0px;
     height: 3.5em; /* footer의 높이 */
     width: 100%;   
     background-color: #C9C9C9;
     padding: 0.5em 0 0.5em 0.5em;
+}
+
+
+@media (min-width: 479px) {
+    footer {
+        box-sizing: border-box;
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        height: 3.5em; /* footer의 높이 */
+        width: 100%;   
+        background-color: #C9C9C9;
+        padding: 0.5em 0 0.5em 0.5em;
+    }
 }
 
 .reload button {
