@@ -62,9 +62,9 @@ footer {
     border-radius: 1rem;
 }
 
-.map-api {
+#map-api {
     vertical-align: middle;
-    width: 100px;
+    width: 150px;
     font-size: 12px;
     font-weight: normal;
     background-color:white;
