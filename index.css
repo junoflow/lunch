@@ -1,19 +1,7 @@
-
-@media all and (max-width: 3000px) {
-    .page .x700{display:block;}
-    .page .x290{display:none;}
-}
-
-@media all and (max-width: 479px) {
-    .page .x700{display:none;}
-    .page .x290{display:block;}
-}
-
-
 html {
     box-sizing: border-box;
     position: relative;
-    font-family: "Noto Sans KR";
+    font-family: "Pretendard";
     min-height: 100%;
     max-width: 100%;
     margin: 0;
@@ -22,19 +10,10 @@ html {
 
 body {
     box-sizing: border-box;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
-    width: 100%;
+    max-width: 500px;
     min-height: 100%;
-}
-
-.page .x700 {
-    width:100%;
-    text-align: center;
-    vertical-align: middle; 
-    height: auto;
-    min-height: 100%;
-    padding-bottom: 3.5em;  /*footer의 높이*/ 
 }
 
 .page .x290 {
@@ -53,19 +32,6 @@ footer {
     padding: 0.5em 0 0.5em 0.5em;
 }
 
-
-@media (min-width: 479px) {
-    footer {
-        box-sizing: border-box;
-        position: absolute;
-        left: 0px;
-        bottom: 0px;
-        height: 3.5em; /* footer의 높이 */
-        width: 100%;   
-        background-color: #C9C9C9;
-        padding: 0.5em 0 0.5em 0.5em;
-    }
-}
 
 .reload button {
     width: 200px;
@@ -124,6 +90,7 @@ footer {
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
 }
 
 #modal .modal-window {
@@ -131,7 +98,7 @@ footer {
     box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.37 );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-    width: 90%;
+    max-width: 500px;
     height: 500px;
     position: relative;
     padding: 10px;
