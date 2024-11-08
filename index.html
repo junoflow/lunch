@@ -23,18 +23,6 @@
         </div>
     </header>
 
-    <!-- PC 막기-->
-
-    <div class="page" style="min-height: 100%; position: relative;">
-
-        <div class="x700">
-            <div style="display:inline-block; height:600px; line-height:600px;">
-                <h1 style="margin: auto;">모바일에서 접속해 주세요</h1>
-            </div>
-        </div>
-
-
-    <!--모바일 버전-->
 
         <div class="x290">
 
@@ -52,7 +40,7 @@
             </div>
 
             <!-- 랜덤 노출 -->
-
+ <!--
             <div class="random" style="box-sizing: border-box; line-height: 120%; width: 100%; padding:0 15px 0 15px">
 
                 <h2>오늘은</h2>
@@ -73,7 +61,38 @@
                 </button>
 
             </div>
-            
+        -->
+
+        <div id="random-store"></div>
+        
+            <script>
+                async function fetchRandomStore() {
+                    const url = 'https://script.google.com/macros/s/AKfycby3yBgqRqU6UQrJk36skx_OSB7a55FTPCFYZPp51LumQV4nj1F5sL65F_abb-TLjkSC/exec'; // 생성된 Apps Script URL로 변경
+                    try {
+                        const response = await fetch(url);
+                        const data = await response.json();
+                        displayStore(data);
+                    } catch (error) {
+                        console.error("데이터를 가져오는 중 오류 발생:", error);
+                    }
+                }
+        
+                function displayStore(data) {
+                    const container = document.getElementById("random-store");
+                    container.innerHTML = `
+                        <h2>${data.storeName}</h2>
+                        <p><strong>메뉴:</strong> ${data.menuName}</p>
+                        <p><strong>주소:</strong> ${data.address}</p>
+                        <p><strong>가격대:</strong> ${data.priceRange}</p>
+                    `;
+                }
+        
+                // 페이지 로드 시 함수 호출
+                fetchRandomStore();
+            </script>
+
+
+
             <!-- 하단 버튼들 -->
 
             <div class="reload" style="display:flex; margin: 4rem auto 1rem auto">
@@ -161,9 +180,8 @@
                 modalOff()
             }
         })
+    </script>
 
-
-     </script> 
 
     <footer>
         <p style="font-size: 12px">문의 : jhhyun@madup.com</p>
