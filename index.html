@@ -66,7 +66,7 @@
 
             <script>
                 async function fetchRandomStore() {
-                    const url = 'https://script.google.com/macros/s/AKfycbzixqzQa8f-5sQDu033pT_ul6tZgSfyuyWTZZW0E1zBT2muOS7bo0pQXkXxubmfUXeM/exec'; // 생성된 Apps Script URL로 변경
+                    const url = 'https://script.google.com/macros/s/AKfycbwgZeAkyXCXZ4lEanvas35VsRqZb0oMvoDzSSrE6lWfO4XWLK1pwZWR58ydlxK7mj3N/exec'; // 생성된 Apps Script URL로 변경
                     try {
                         const response = await fetch(url);
                         const data = await response.json();
@@ -197,7 +197,7 @@
 
             if (storeName && menu && priceRange) {
                 // Google Apps Script URL로 데이터 전송
-                const url = 'https://script.google.com/macros/s/AKfycbzixqzQa8f-5sQDu033pT_ul6tZgSfyuyWTZZW0E1zBT2muOS7bo0pQXkXxubmfUXeM/exec';
+                const url = 'https://script.google.com/macros/s/AKfycbwgZeAkyXCXZ4lEanvas35VsRqZb0oMvoDzSSrE6lWfO4XWLK1pwZWR58ydlxK7mj3N/exec';
 
                 const data = {
                     storeName: storeName,
@@ -211,15 +211,15 @@
                         headers: {
                             'Content-Type': 'application/json'
                         },
-                        body: JSON.stringify(data)
+                        body: JSON.stringify(data),
+                        mode: 'no-cors'
                     });
 
                     const message = await response.text();
 
                     // 메시지 박스를 표시하고 모달을 닫음
-                    alert(message); // 등록이 완료되었음을 알리는 메시지
-                    closeModal(); // 모달 닫기
-                    showMessageBox(); // 메시지 박스 표시
+                    alert("등록 완료"); // 등록이 완료되었음을 알리는 메시지
+                    modalOff(); // 모달 닫기
 
                     // 2초 후에 자동 새로고침
                     setTimeout(function() {
@@ -235,10 +235,6 @@
             }
         });
 
-        // 메시지 박스 표시
-        function showMessageBox() {
-            document.getElementById('message-box').style.display = 'block';
-        }
 
     </script>
 
