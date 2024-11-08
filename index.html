@@ -44,7 +44,7 @@
             <div id="random-store" style="box-sizing: border-box; line-height: 120%; width: 100%; padding:0 15px 0 15px">
 
                 <h2>오늘은</h2>
-                <h2 class="restaurant" style="color: #4a60a8;">식당 이름</h2>
+                <h2 class="restaurant" style="color: #4a60a8;"></h2>
                 <h2>어떠세요?</h2>
 
                 <div class="info" style="margin: 15px 0">
@@ -53,14 +53,16 @@
                     <p class="cost"></p>
                 </div>
 
-                <button class="map-api" type="button" style="display: inline-block;">
+                <button id="map-api" type="button" style="display: inline-block;">
                     
                     <img src="img/place.svg" style="height:20px; display:inline-block;  vertical-align: middle;" />
-                    <p style="display:inline-block; margin: 0; vertical-align: middle;">지도에서 보기</p>
+                    <p style="display:inline-block; margin: 0; vertical-align: middle;">네이버 지도에서 보기</p>
                 
                 </button>
 
             </div>
+
+            <!-- 추천 코드 -->
 
             <script>
                 async function fetchRandomStore() {
@@ -79,12 +81,24 @@
                     document.querySelector(".menu").textContent = data.menuName;
                     document.querySelector(".address").textContent = data.address;
                     document.querySelector(".cost").textContent = data.priceRange;
+                    
+                    // 현재 주소 저장
+                    currentStoreName = data.storeName;
                 }
         
+
+                document.getElementById("map-api").addEventListener("click", () => {
+                    if (currentStoreName) {
+                        const naverMapUrl = `https://map.naver.com/v5/search/${encodeURIComponent(currentStoreName)}`;
+                        window.open(naverMapUrl, "_blank"); // 새 탭으로 열기
+                    } else {
+                        alert("가게 이름을 불러오는 중입니다. 잠시 후 다시 시도해 주세요.");
+                    }
+                });
+
                 // 페이지 로드 시 함수 호출
                 fetchRandomStore();
             </script>
-
 
 
             <!-- 하단 버튼들 -->
