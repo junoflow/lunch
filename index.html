@@ -40,17 +40,17 @@
             </div>
 
             <!-- 랜덤 노출 -->
- <!--
-            <div class="random" style="box-sizing: border-box; line-height: 120%; width: 100%; padding:0 15px 0 15px">
+
+            <div id="random-store" style="box-sizing: border-box; line-height: 120%; width: 100%; padding:0 15px 0 15px">
 
                 <h2>오늘은</h2>
                 <h2 class="restaurant" style="color: #4a60a8;">식당 이름</h2>
                 <h2>어떠세요?</h2>
 
                 <div class="info" style="margin: 15px 0">
-                    <p class="menu">주요 메뉴</p>
-                    <p class="address">서울시 강남구 어쩌구로 11길</p>
-                    <p class="cost">9000~12000</p>
+                    <p class="menu"></p>
+                    <p class="address"></p>
+                    <p class="cost"></p>
                 </div>
 
                 <button class="map-api" type="button" style="display: inline-block;">
@@ -61,9 +61,6 @@
                 </button>
 
             </div>
-        -->
-
-        <div id="random-store"></div>
 
             <script>
                 async function fetchRandomStore() {
@@ -78,13 +75,10 @@
                 }
         
                 function displayStore(data) {
-                    const container = document.getElementById("random-store");
-                    container.innerHTML = `
-                        <h2>${data.storeName}</h2>
-                        <p><strong>메뉴:</strong> ${data.menuName}</p>
-                        <p><strong>주소:</strong> ${data.address}</p>
-                        <p><strong>가격대:</strong> ${data.priceRange}</p>
-                    `;
+                    document.querySelector(".restaurant").textContent = data.storeName;
+                    document.querySelector(".menu").textContent = data.menuName;
+                    document.querySelector(".address").textContent = data.address;
+                    document.querySelector(".cost").textContent = data.priceRange;
                 }
         
                 // 페이지 로드 시 함수 호출
